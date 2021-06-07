@@ -1,18 +1,11 @@
-const router = require('express').Router();
-const apiRoutes = require('./api/index.js');
-userRoutes = require("../routes/api/userRoutes")
-plantRoutes = require("../routes/api/plantRoutes")
-plantSearchRoutes = require('../routes/api/plantSearchRoutes')
-cartRoutes = require('../routes/api/cartRoutes')
+const router = require("express").Router();
 
+//api routes
+const apiRoutes = require("./api");
+router.use("/api", apiRoutes);
 
-router.get('/', function(req, res) {
-    res.send("hello!")
-})
-router.use('/api', apiRoutes);
-router.use(userRoutes);
-router.use(plantRoutes);
-router.use(plantSearchRoutes);
-router.use(cartRoutes);
+// authorization routes
+const auth = require("./auth");
+router.use(auth);
 
 module.exports = router;

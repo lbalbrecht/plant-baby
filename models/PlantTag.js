@@ -1,30 +1,30 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class PlantTag extends Model {}
 
 PlantTag.init(
   {
-    id: {                        
-      type: DataTypes.INTEGER,   
-      allowNull: false,          
-      primaryKey: true,          
-      autoIncrement: true      
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     // Store a reference of the `id` of the plant this plant_tag belongs to
-    plant_id: {                
-      type: DataTypes.INTEGER,   
-      references: {              
-        model: 'plant',
-        key: 'id',
+    plant_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "plant",
+        key: "id",
       },
     },
     // Store a reference of the `id` of the tag this plant_tag belongs to
-    tag_id: {                    
-      type: DataTypes.INTEGER,   
-      references: {              
-        model: 'tag',
-        key: 'id',
+    tag_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "tag",
+        key: "id",
       },
     },
   },
@@ -33,7 +33,7 @@ PlantTag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'plant_tag',
+    modelName: "plant_tag",
   }
 );
 

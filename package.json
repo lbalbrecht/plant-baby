@@ -4,6 +4,8 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server.js",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.4.1",
+    "@stripe/stripe-js": "^1.15.0",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -31,12 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lbalbrecht/plant-baby.git"
+    "url": "git+https://github.com/AmandaNguyenn/plant-baby.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lbalbrecht/plant-baby/issues"
+    "url": "https://github.com/AmandaNguyenn/plant-baby/issues"
   },
-  "homepage": "https://github.com/lbalbrecht/plant-baby#readme"
+  "homepage": "https://github.com/AmandaNguyenn/plant-baby#readme"
 }
