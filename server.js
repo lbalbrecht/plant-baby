@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //LOCAL
 
 //deployed
-app.use(cors({origin:["https://plantbaby.herokuapp.com/"]}));
+app.use(cors({origin:["https://plantbaby.herokuapp.com"]}));
 
 
 app.use(routes);
