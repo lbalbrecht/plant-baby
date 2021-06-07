@@ -31,13 +31,13 @@ const app = express();
 app.use(express.json({limit:'50mb'}));
 app.use(express.urlencoded({ limit:'50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors())
+// app.use(cors())
 
 
 //LOCAL
 
 //deployed
-// app.use(cors({origin:["deployed front end https"]}));
+app.use(cors({origin:["https://plantbaby.herokuapp.com/"]}));
 
 
 app.use(routes);
